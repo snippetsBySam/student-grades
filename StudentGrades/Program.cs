@@ -2,4 +2,21 @@
 
 Student jeff = new Student("Jeff", 'B', 1);
 Console.WriteLine($"My name is {jeff.Name}, my grade is {jeff.Grade}, I'm in group {jeff.Group}");
-
+jeff.Upgrade();
+Console.WriteLine($"My name is {jeff.Name}, my grade is {jeff.Grade}, I'm in group {jeff.Group}");
+jeff.Upgrade();
+Console.WriteLine($"My name is {jeff.Name}, my grade is {jeff.Grade}, I'm in group {jeff.Group}");
+jeff.Downgrade();
+Console.WriteLine($"My name is {jeff.Name}, my grade is {jeff.Grade}, I'm in group {jeff.Group}");
+jeff.Downgrade();
+Console.WriteLine($"My name is {jeff.Name}, my grade is {jeff.Grade}, I'm in group {jeff.Group}");
+jeff.Downgrade();
+Console.WriteLine($"My name is {jeff.Name}, my grade is {jeff.Grade}, I'm in group {jeff.Group}");
+jeff.Downgrade();
+Console.WriteLine($"My name is {jeff.Name}, my grade is {jeff.Grade}, I'm in group {jeff.Group}");
+jeff.Downgrade();
+Console.WriteLine($"My name is {jeff.Name}, my grade is {jeff.Grade}, I'm in group {jeff.Group}");
+jeff.Downgrade();
+Console.WriteLine($"My name is {jeff.Name}, my grade is {jeff.Grade}, I'm in group {jeff.Group}");
+//Student john = new Student("Jeff", 'Z', 6);
+//Console.WriteLine($"My name is {john.Name}, my grade is {john.Grade}, I'm in group {john.Group}");

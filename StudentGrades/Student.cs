@@ -11,12 +11,13 @@ namespace StudentGrades
         private string _name;
         private char _grade;
         private int _group;
+        private string secretNickName;
         private static char[] grades = {'A', 'B', 'C', 'D', 'E', 'F' };
         private static int[] groups = { 1, 2, 3, 4, 5 };
 
-        private string secretNickName { get; } 
+         
         public Student(string name, char grade, int group) =>
-            (_name, Grade, _group, secretNickName) = (name, grade, group, "MySecretNickName");
+            (_name, Grade, Group, secretNickName) = (name, grade, group, "MySecretNickName");
 
         public string Name
         {
@@ -27,13 +28,13 @@ namespace StudentGrades
             get { return _grade; }
             private set
             {
-                if (grades.Contains(value))
+                if (grades.Contains(char.ToUpper(value)))
                 {
-                    _grade = value;
+                    _grade = char.ToUpper(value);
                 }
                 else
                 {
-                    _grade = 'N';
+                    throw new ArgumentException($"\"{value}\" is not a valid grade"); ;
                 }
             }
         }
@@ -48,17 +49,19 @@ namespace StudentGrades
                 }
                 else
                 {
-                    _group = 0;
+                    throw new ArgumentException($"\"{value}\" is not a valid group");
                 }
             }
         }
         public void Upgrade()
         {
-
+            if(_grade > grades[0])
+            _grade--;
         }
         public void Downgrade()
         {
-
+            if (_grade < grades.Last())
+                _grade++;
         }
     }
 }
